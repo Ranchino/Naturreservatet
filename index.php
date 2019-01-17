@@ -8,7 +8,23 @@
 </head>
 <body>
     <?php
+        class Animal{
+            abstract public function MakeSound(){
 
+            }
+        }
+
+        class Ap extends Animal {
+            
+        }
+
+        class giraff extends Animal{
+            
+        }
+
+        class tiger extends Animal{
+            
+        }
     ?>
     <form action="results.php" method="POST">
         <h2>Hur många av varje vill du ha i reservatet?</h2><br>
