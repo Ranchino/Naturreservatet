@@ -5,41 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Naturreservatet</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
-    <?php
-        class Animal{
-            abstract public function MakeSound(){
-
-            }
-        }
-
-        class Ap extends Animal {
-            
-        }
-
-        class giraff extends Animal{
-            
-        }
-
-        class tiger extends Animal{
-            
-        }
-    ?>
+   
     <form action="results.php" method="POST">
         <h2>Hur många av varje vill du ha i reservatet?</h2><br>
         <label>Apor?</label><br>
-        <input type=text name=apes><br><br>
+        <input type="number" name="apes" id="theAp"><br><br>
 
         <label>Giraffer?</label><br>
-        <input type=text name=girafs><br><br>
+        <input type="number" name="girafs" id="theGiraf"><br><br>
 
         <label>Tigrar?</label><br>
-        <input type=text name=tiger><br><br>
+        <input type="number" name="tiger" id="theTiger"><br><br>
 
         <label>Kokosnötter?</label><br>
-        <input type=text name=coconuts><br><br>
-        <button type=submit>Skicka</button><br>
+        <input type="number" name="coconuts" id="theCoconut"><br><br>
+
+        <button type="number">Skicka</button><br>
 
     </form>
     
