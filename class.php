@@ -3,16 +3,18 @@
             abstract function GetImage();
             abstract function MakeSound();
 
+            public function __construct() {
+                $randListName = array("ninja", "unicorn", "rainbows", "bunny", "captain", "cupcake", "glitter", "exorcism", "dragon", "jellybeans", "snakes", "dolls", "bushes", "cookies", "ice cream", "kazoo");
+                $name = $randListName;
+                $this->name = $name[array_rand($name)];
+            }
+
         }
 
         class Ap extends Animal {
-            private $animalName;
-            function __construct($animalName){
-            $this->animalName = $animalName;  
-            }
 
             public function get_name(){
-                return $this->animalName;
+                return $this->name;
             }
                 
             public function MakeSound(){
@@ -25,13 +27,10 @@
         }
 
         class giraff extends Animal{
-            private $animalName;
-            function __construct($animalName){
-            $this->animalName = $animalName;
-            }
+            
 
             public function get_name(){
-                return $this->animalName;
+                return $this->name;
             }
 
             public function MakeSound(){
@@ -44,13 +43,10 @@
         }
 
         class tiger extends Animal{
-            private $animalName;
-            function __construct($animalName){
-            $this->animalName = $animalName;
-            }
+            
 
             public function get_name(){
-                return $this->animalName;
+                return $this->name;
             }
 
             public function MakeSound(){
@@ -64,13 +60,10 @@
     
 
         class coconuts extends Animal{
-            private $animalName;
-            function __construct($animalName){
-            $this->animalName = $animalName;
-            }
+        
 
             public function get_food(){
-                return $this->animalName;
+                return $this->name;
             }
 
             public function MakeSound(){
@@ -81,13 +74,7 @@
              }
 
             
-        }
-
-       
-        
-        
-        
-        
+        }   
         
 
     ?>

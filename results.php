@@ -35,34 +35,40 @@
 
 <script>
     $(document).ready(function(){
+
         var apa = <?php echo json_encode($Animal1->MakeSound());?>;
         var gir = <?php echo json_encode($Animal2->MakeSound());?>;
         var tig = <?php echo json_encode($Animal3->MakeSound());?>;
         var coc = <?php echo json_encode($Food1->MakeSound());?>;
 
+        var apaName = <?php echo json_encode($Animal1->get_name());?>;
+        var girName = <?php echo json_encode($Animal2->get_name());?>;
+        var tigName = <?php echo json_encode($Animal3->get_name());?>;
+        var cocName = <?php echo json_encode($Food1->get_food());?>;
+
 
         $(".theApSound").on("click", function(){monkeySound();});
 
         function monkeySound(){
-            alert(apa);
+            alert(apaName+" säger: "+apa);
         }
 
         $(".theGirafSound").on("click", function(){giraffSound();});
         
         function giraffSound(){
-            alert(gir);
+            alert(girName+" säger: "+gir);
         }
 
         $(".theTigerSound").on("click", function(){tigerSound();});
         
         function tigerSound(){
-            alert(tig);
+            alert(tigName+" säger: "+tig);
         }
 
         $(".theCoconutSound").on("click", function(){coconutSound();});
         
         function coconutSound(){
-            alert(coc);
+            alert(cocName+" säger: "+coc);
         }
 
         
