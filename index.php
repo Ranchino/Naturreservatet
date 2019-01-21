@@ -25,7 +25,7 @@
         <label>Kokosnötter?</label><br>
         <input type="number" name="coconuts" id="theCoconut"><br><br>
 
-        <button type="number">Skicka</button><br>
+        <button type="submit">Skicka</button><br>
 
     </form>
     

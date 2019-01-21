@@ -2,12 +2,13 @@
         abstract class Animal{
             abstract function GetImage();
             abstract function MakeSound();
+
         }
 
         class Ap extends Animal {
             private $animalName;
             function __construct($animalName){
-            $this->animalName = $animalName;
+            $this->animalName = $animalName;  
             }
 
             public function get_name(){
@@ -15,11 +16,11 @@
             }
                 
             public function MakeSound(){
-               print "Whooo WHoo";  
+                return "Whooo WHoo";
             }
 
             public function GetImage(){
-               print "<img src='ape1.jpg'>"; 
+               print "<img src='ape1.jpg' class='theApSound' height='200px' width='200px'>"; 
             }
         }
 
@@ -34,11 +35,11 @@
             }
 
             public function MakeSound(){
-                print "sahhee sahe";  
+                return "sahhee sahe";  
              }
 
              public function GetImage(){
-                echo "<img src='giraffe1.jpg'>"; 
+                print "<img src='giraffe1.jpg' class='theGirafSound' height='200px' width='200px'>"; 
              }
         }
 
@@ -53,11 +54,11 @@
             }
 
             public function MakeSound(){
-                print "aahhwwre";  
+                return "aahhwwre";  
              }
 
              public function GetImage(){
-                echo "<img src='tiger1.jpg'>"; 
+                print "<img src='tiger1.jpg' class='theTigerSound' height='200px' width='200px'>"; 
              }
         }
     
@@ -73,16 +74,16 @@
             }
 
             public function MakeSound(){
-                print "Supperrgoood";  
+                return "Supperrgoood";  
              }
              public function GetImage(){
-                echo "<img src='coconut1.jpg'>"; 
+                print "<img src='coconut1.jpg' class='theCoconutSound' height='200px' width='200px'>"; 
              }
 
             
         }
 
-
+       
         
         
         
