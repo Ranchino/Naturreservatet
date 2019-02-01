@@ -1,78 +1,75 @@
 <?php
         abstract class Animal{
-            abstract function GetImage();
-            abstract function MakeSound();
-
+            abstract protected function MakeSound();
+            public $name;
+            public $imageUrl;
             public function __construct() {
-                $randListName = array("ninja", "unicorn", "rainbows", "bunny", "captain", "cupcake", "glitter", "exorcism", "dragon", "jellybeans", "snakes", "dolls", "bushes", "cookies", "ice cream", "kazoo");
-                $name = $randListName;
-                $this->name = $name[array_rand($name)];
+                $randListName = array("Ninja", "Unicorn", "Rainbow", "Bunny", "Captain", "Cupcake", "Glitter", "Exorcism", "Dragon", "Jellybean", "Snake", "Doll", "Bush", "Cookie", "Ice cream", "Kazoo");
+                $this->name = $randListName[array_rand($randListName)];
+            }
+            public function onClickCode() {
+                $text = 'alert("';
+                $text .= $this->name;
+                $text .= " säger: ";
+                $text .= $this->MakeSound();
+                $text .= '");';
+                return $text;
+            }
+            public function echoImage() {
+                echo "<img style='max-width:25em;' src='".$this->imageUrl."' onClick='".$this->onClickCode()."'/><br>";
             }
 
         }
 
         class Ap extends Animal {
-
-            public function get_name(){
-                return $this->name;
+            
+            function __construct($imageUrl) {
+                parent::__construct();
+                $this->imageUrl = $imageUrl;
             }
                 
-            public function MakeSound(){
+            function MakeSound(){
                 return "Whooo WHoo";
-            }
-
-            public function GetImage(){
-               print "<img src='ape1.jpg' class='theApSound' height='200px' width='200px'>"; 
             }
         }
 
         class giraff extends Animal{
             
-
-            public function get_name(){
-                return $this->name;
+            function __construct($imageUrl) {
+                parent::__construct();
+                $this->imageUrl = $imageUrl;
             }
 
             public function MakeSound(){
                 return "sahhee sahe";  
              }
-
-             public function GetImage(){
-                print "<img src='giraffe1.jpg' class='theGirafSound' height='200px' width='200px'>"; 
-             }
         }
 
         class tiger extends Animal{
             
-
-            public function get_name(){
-                return $this->name;
+            function __construct($imageUrl) {
+                parent::__construct();
+                $this->imageUrl = $imageUrl;
             }
 
             public function MakeSound(){
-                return "aahhwwre";  
+                return "rraaaawwww";  
              }
 
-             public function GetImage(){
-                print "<img src='tiger1.jpg' class='theTigerSound' height='200px' width='200px'>"; 
-             }
         }
     
 
         class coconuts extends Animal{
         
 
-            public function get_food(){
-                return $this->name;
+            function __construct($imageUrl) {
+                parent::__construct();
+                $this->imageUrl = $imageUrl;
             }
 
             public function MakeSound(){
-                return "Supperrgoood";  
+                return "suupperrNajs";  
              }
-             public function GetImage(){
-                print "<img src='coconut1.jpg' class='theCoconutSound' height='200px' width='200px'>"; 
-             }
-
             
         }   
         
