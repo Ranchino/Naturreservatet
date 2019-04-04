@@ -9,27 +9,32 @@
     $nrofCoco = $_POST['coconuts'];
 
     for($i = 0; $i < $nrofApe; $i++){
-        $Animal1 = new ap("Apa");
-        echo $Animal1->GetImage()." ". "<h3>".$Animal1->get_name()."</h3><br>";
+        
+        $Animal1 = new ap("ape1.jpg");
+        $Animal1->echoImage();
+        echo $Animal1->name . " " . $Animal1->MakeSound() . '<br><br>';
     }
 
     for($i = 0; $i < $nrofGiraff; $i++){
-        $Animal2 = new giraff("Giraff");
-        echo $Animal2->GetImage()." ". "<h3>".$Animal2->get_name()."</h3><br>";
+        $Animal2 = new giraff("giraffe1.jpg");
+        $Animal2->echoImage();
+        echo $Animal2->name . " " . $Animal2->MakeSound() . '<br><br>';
 
     }
 
     for($i = 0; $i < $nrofTiger; $i++){
-        $Animal3 = new tiger("Tiger");
-        echo $Animal3->GetImage()." "."<h3>".$Animal3->get_name()."</h3><br>";
-
+        $Animal3 = new tiger("tiger1.jpg");
+        $Animal3->echoImage();
+        echo $Animal3->name . " " . $Animal3->MakeSound() . '<br><br>';
     }
 
     for($i = 0; $i < $nrofCoco; $i++){
-        $Food1 = new coconuts("Kokosnöt");
-        echo $Food1->GetImage()." "."<h3>".$Food1->get_food()."</h3><br>";
+        $Food1 = new coconuts("coconut1.jpg");
+        $Food1->echoImage();
+        echo $Food1->name . " " . $Food1->MakeSound() . '<br><br>';
 
-    }
+    } 
+
 
 ?>
 
@@ -47,7 +52,7 @@
         var cocName = <?php echo json_encode($Food1->get_food());?>;
 
 
-        $(".theApSound").on("click", function(){monkeySound();});
+        /* $(".theApSound").on("click", function(){monkeySound();});
 
         function monkeySound(){
             alert(apaName+" säger: "+apa);
@@ -71,7 +76,7 @@
             alert(cocName+" säger: "+coc);
         }
 
-        
+         */
     });
 
 
