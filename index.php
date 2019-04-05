@@ -8,9 +8,9 @@
 </head>
 <body>
     <?php
+        session_start();
         include "class.php";
         include "function.php";
-        session_start();
         include "check.php";
 
     ?>
